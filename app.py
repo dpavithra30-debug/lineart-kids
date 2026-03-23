@@ -9,7 +9,7 @@ app = Flask(__name__)
 OUTPUT_FOLDER = "outputs"
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
-OPENAI_API_KEY = "YOUR_API_KEY"
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # -------- AI IMAGE GENERATION --------
 def generate_ai_image(prompt, filename):
